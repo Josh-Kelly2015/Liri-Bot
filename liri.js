@@ -13,9 +13,9 @@ var SpotifyQuery = function () {
     //Make up my own function name to search spotify
     this.findSong = song => {
 
-        spotify.search({ type: 'track', query: song, limit: 5 }).then(data => console.log(data)).catch(err => console.log(err));
+        spotify.search({ type: 'track', query: song, limit: 5 }).then(response => console.log(response)).catch(err => console.log(err));
 
-        var jsonData = data;
+        var jsonData = response;
         var songData = [
             "Artist(s): " + jsonData,
             "Song Name: ",
